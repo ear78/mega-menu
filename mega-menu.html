@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mega Menu</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font/css/open-iconic-bootstrap.min.css">
+
+    <script src="js/jquery.js"></script>
+
+</head>
+
+<style>
+
+    body {
+        font-size: 15px;
+        font-weight: 100;
+        font-family: "Avenir Next", sans-serif;
+    }
+
+    a {
+        color: #00e0ff;
+        -webkit-transition: all .2s;
+        -moz-transition: all .2s;
+        -ms-transition: all .2s;
+        -o-transition: all .2s;
+        transition: all .2s;
+    }
+
+    a:hover {
+        color: #757575;
+        text-decoration: none;
+    }
+
+    ul {
+        margin-bottom: 0px;
+    }
+
+    .oi {
+        margin-left: 5px;
+    }
+    
+    .navigation-container {
+        display: none;
+    }
+
+    .main-navigation,
+    .mobile-navigation {
+        height: 45px;
+        background: #212121;
+    }
+
+    .mega-menu {
+        color: #fff;
+    }
+
+    .mega-menu h3 {
+        color: #212121;
+    }
+
+    .mega-menu-content {
+        visibility: hidden;
+        opacity: 0;
+        background: #f7f7f7;
+        width: 100%;
+        padding: 15px;
+        left: 15px;
+        top: 5px;
+        z-index: 10;
+        -webkit-transform: translate3d(0,10px,0);
+        -moz-transform: translate3d(0,10px,0);
+        -ms-transform: translate3d(0,10px,0);
+        -o-transform: translate3d(0,10px,0);
+        transform: translate3d(0,10px,0);
+        -webkit-transition: all .3s ease-out;
+        -moz-transition: all .3s ease-out;
+        -ms-transition: all .3s ease-out;
+        -o-transition: all .3s ease-out;
+        transition: all .3s ease-out;
+    }
+
+    .mega-menu-content::before {
+        content: '';
+        height: 15px;
+        width: 100%;
+        background: transparent;
+        display: block;
+        top: -11px;
+        position: absolute;
+    }
+
+    .mega-menu {
+        cursor: default;
+    }
+    
+    .mega-menu:hover .mega-menu-content{
+        visibility: visible;
+        opacity: 1;
+        min-height: 200px;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        position: relative;
+    }
+
+    .hero-image {
+        background:  linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("./assets/bg-windows copy.jpg"); /* Photo Credit: Dimitri Pitrov */
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 200px;
+        padding: 125px 0;
+        background-position: 50% 50%;
+        color: white;
+        -webkit-transition: all .2s ease;
+        -moz-transition: all .2s ease;
+        -ms-transition: all .2s ease;
+        -o-transition: all .2s ease;
+        transition: all .2s ease;
+    }
+
+    .hero-image span {
+        color: #00e0ff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .title {
+        margin-bottom: 0;
+    }
+
+    .mobile-navigation span {
+        color: #fff;
+    }
+
+    .mobile-menu-container {
+        height: 100%;
+        position: absolute;
+        top: 45px;
+        left: 0;
+        background: rgba(0,0,0,.9);
+        z-index: 5;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+        -webkit-transform: translate3d(-100%,0,0);
+        -moz-transform: translate3d(-100%,0,0);
+        -ms-transform: translate3d(-100%,0,0);
+        -o-transform: translate3d(-100%,0,0);
+        transform: translate3d(-100%,0,0);
+    }
+
+    .mobile-menu-container ul {
+        min-height: 260px;
+        padding: 50px 0;
+    }
+
+    .mobile-menu-container.active {
+        transform: translate3d(0,0,0);
+    }
+
+    .mobile-menu-container .mega-menu-content ul {
+        padding: 0;
+        min-height: auto;
+    }
+
+    @media(min-width:768px){
+        .navigation-container {
+            display: block;
+        }
+
+        .hero-image {
+            padding: 150px 0;
+        }
+
+        .mega-menu-content {
+            background: #f7f7f7;
+            width: 100%;
+            padding: 15px;
+            position: fixed;
+            left: 15px;
+            top: 45px;
+            z-index: 10;
+        }
+
+        .mega-menu:hover .mega-menu-content{
+            position: static;
+        }
+    }
+
+</style>
+<body>
+
+    <!-- Mega Menu Navigation With CSS And Hover Animation -->
+    <nav class="container-fluid navigation-container">
+        <ul class="row align-items-center main-navigation">
+            <li class="col text-center"><a href="#">Home<span class="oi oi-vertical-align-bottom"></span></a></li>
+            <li class="col text-center"><a href="#">About<span class="oi oi-audio-spectrum"></span></a></li>
+            <li class="col text-center mega-menu">
+                Mega Menu
+                <span class="oi oi-grid-four-up"></span>
+                <div class="row mega-menu-content">
+                    <div class="col-sm-12 col-md-4">
+                        <h3>Section 1</h3>
+                        <ul>
+                            <li class="link"><a href="#">link 1<span class="oi oi-map-marker"></span></a></li>
+                            <li class="link"><a href="#">link 2<span class="oi oi-map-marker"></span></a></li>
+                            <li class="link"><a href="#">link 3<span class="oi oi-map-marker"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <h3>Section 2</h3>
+                        <ul>
+                            <li class="link"><a href="#">link 1<span class="oi oi-map-marker"></span></a></li>
+                            <li class="link"><a href="#">link 2<span class="oi oi-map-marker"></span></a></li>
+                            <li class="link"><a href="#">link 3<span class="oi oi-map-marker"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <h3>Section 3</h3>
+                        <ul>
+                            <li class="link"><a href="#">link 1<span class="oi oi-map-marker"></span></a></li>
+                            <li class="link"><a href="#">link 2<span class="oi oi-map-marker"></span></a></li>
+                            <li class="link"><a href="#">link 3<span class="oi oi-map-marker"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="col text-center"><a href="#">Blog<span class="oi oi-calendar"></span></a></li>
+            <li class="col text-center"><a href="#">Contact<span class="oi oi-browser"></span></a></li>
+        </ul>
+    </nav>
+
+
+
+    <!-- mobile navigation -->
+    <nav class="container-fluid mobile-navigation-container">
+        <ul class="row align-items-center mobile-navigation">
+            <div class="col-12 text-right">
+                <span id="hamburger" class="oi oi-menu"></span>
+            </div>
+        </ul>
+    </nav>
+
+    <div class="container-fluid mobile-menu-container">
+        <ul class="row align-items-center flex-column">
+            <li class="col text-center"><a href="#">Home<span class="oi oi-vertical-align-bottom"></span></a></li>
+            <li class="col text-center"><a href="#">About<span class="oi oi-audio-spectrum"></span></a></li>
+            <li class="col text-center mega-menu">
+                Mega Menu
+                <span class="oi oi-grid-four-up"></span>
+                <div class="row mega-menu-content">
+                    <div class="col-sm-12 col-md-4">
+                        <h3>Section 1</h3>
+                        <ul>
+                            <li class="link"><a href="#">link 1<span class="oi oi-map-marker"></span></a></li>
+                            <li class="link"><a href="#">link 2<span class="oi oi-map-marker"></span></a></li>
+                            <li class="link"><a href="#">link 3<span class="oi oi-map-marker"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <h3>Section 2</h3>
+                        <ul>
+                            <li class="link"><a href="#">link 1<span class="oi oi-map-marker"></span></a></li>
+                            <li class="link"><a href="#">link 2<span class="oi oi-map-marker"></span></a></li>
+                            <li class="link"><a href="#">link 3<span class="oi oi-map-marker"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <h3>Section 3</h3>
+                        <ul>
+                            <li class="link"><a href="#">link 1<span class="oi oi-map-marker"></span></a></li>
+                            <li class="link"><a href="#">link 2<span class="oi oi-map-marker"></span></a></li>
+                            <li class="link"><a href="#">link 3<span class="oi oi-map-marker"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="col text-center"><a href="#">Blog<span class="oi oi-calendar"></span></a></li>
+            <li class="col text-center"><a href="#">Contact<span class="oi oi-browser"></span></a></li>
+        </ul>
+    </div>
+
+    <section class="container-fluid">
+        <div class="row hero-image">
+            <h1 class="col-12 col-md-10 offset-md-2 title">Mega Menu</h1>
+            <p class="col-12 col-md-10 offset-md-2 sub-title">Simple Hover Mega Menu For <span>Bigger</span> Navigation Needs</p>
+            <div class="col-12 col-md-10 offset-md-2">
+                <button type="button" class="btn btn-outline-light">Sign Up Now!</button>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function(){
+            var isActive = false;
+            $('#hamburger').on('click', function(){
+                isActive = !isActive;
+                isActive ? $('.mobile-menu-container').addClass('active') : $('.mobile-menu-container').removeClass('active');
+            })
+        })
+
+
+    </script>
+
+</body>
+</html>
