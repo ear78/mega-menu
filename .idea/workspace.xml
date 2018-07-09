@@ -16,8 +16,8 @@
       <file leaf-file-name="mega-menu.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mega-menu.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="217" column="18" selection-start-line="217" selection-start-column="18" selection-end-line="217" selection-end-column="18" />
+            <state relative-caret-position="-496">
+              <caret line="261" selection-start-line="261" selection-end-line="261" />
             </state>
           </provider>
         </entry>
@@ -54,9 +54,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="309" />
+    <option name="x" value="464" />
     <option name="y" value="23" />
-    <option name="width" value="1131" />
+    <option name="width" value="976" />
     <option name="height" value="815" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -121,18 +121,18 @@
       <option name="presentableId" value="Default" />
       <updated>1530290110876</updated>
       <workItem from="1530290112130" duration="21921000" />
-      <workItem from="1531170063592" duration="299000" />
+      <workItem from="1531170063592" duration="1577000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22220000" />
+    <option name="totallyTimeSpent" value="23498000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="309" y="23" width="1131" height="815" extended-state="0" />
+    <frame x="464" y="23" width="976" height="815" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14600551" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17023554" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -202,8 +202,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mega-menu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="217" column="18" selection-start-line="217" selection-start-column="18" selection-end-line="217" selection-end-column="18" />
+        <state relative-caret-position="-496">
+          <caret line="261" selection-start-line="261" selection-end-line="261" />
         </state>
       </provider>
     </entry>
